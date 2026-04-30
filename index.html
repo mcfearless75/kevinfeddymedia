@@ -443,6 +443,17 @@
       position: absolute; inset: 0;
       background: linear-gradient(135deg, #111 0%, #1a0a0a 100%);
     }
+    .about__card-photo {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .about__card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,.08) 0%, rgba(0,0,0,.15) 50%, rgba(0,0,0,.72) 100%);
+    }
     .about__card-initials {
       position: absolute;
       top: 50%; left: 50%;
@@ -1069,7 +1080,8 @@
           <div data-reveal="left">
             <div class="about__card">
               <div class="about__card-bg" aria-hidden="true"></div>
-              <span class="about__card-initials" aria-hidden="true">KF</span>
+              <img class="about__card-photo" src="kevin.jpg" alt="Kevin Feddy — PR consultant and copywriter, Manchester">
+              <div class="about__card-overlay" aria-hidden="true"></div>
               <div class="about__card-label">
                 <div class="about__card-name">Kevin Feddy</div>
                 <div class="about__card-title">PR Consultant &amp; Copywriter</div>
