@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Feddy Media | PR & Copywriting | Manchester</title>
+  <meta name="description" content="Kevin Feddy Media provides expert PR, copywriting, media relations and media training for businesses across the UK. 25+ years of journalism experience from the Manchester Evening News.">
+  <meta name="author" content="Kevin Feddy Media">
+  <meta property="og:title" content="Kevin Feddy Media | PR & Copywriting | Manchester">
+  <meta property="og:description" content="Expert PR and copywriting from a former Manchester Evening News business editor. Media relations, content writing, and media training tailored for your business.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kevinfeddymedia.co.uk/">
+  <link rel="canonical" href="https://kevinfeddymedia.co.uk/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── Design Tokens ─────────────────────────────────────────── */
+    :root {
+      --c-bg:        #FAFAFA;
+      --c-surface:   #FFFFFF;
+      --c-border:    #E4E4E7;
+      --c-text:      #09090B;
+      --c-muted:     #52525B;
+      --c-primary:   #18181B;
+      --c-secondary: #3F3F46;
+      --c-cta:       #1D4ED8;
+      --c-cta-hover: #1E40AF;
+      --c-accent:    #EFF6FF;
+
+      --ff-heading:  'Newsreader', Georgia, serif;
+      --ff-body:     'Roboto', system-ui, sans-serif;
+
+      --space-xs:  0.5rem;
+      --space-sm:  1rem;
+      --space-md:  1.5rem;
+      --space-lg:  2.5rem;
+      --space-xl:  4rem;
+      --space-2xl: 6rem;
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+
+      --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md:  0 4px 16px rgba(0,0,0,.08);
+      --shadow-lg:  0 12px 40px rgba(0,0,0,.10);
+
+      --nav-h: 72px;
+      --max-w: 1200px;
+      --dur:   250ms;
+    }
+
+    /* ─── Reset ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--ff-body);
+      background: var(--c-bg);
+      color: var(--c-text);
+      line-height: 1.65;
+      font-size: 1rem;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; font: inherit; border: none; background: none; }
+
+    /* ─── Utilities ──────────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius-md);
+      font-family: var(--ff-body);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      transition: background var(--dur) ease, color var(--dur) ease,
+                  box-shadow var(--dur) ease, transform var(--dur) ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn:focus-visible {
+      outline: 3px solid var(--c-cta);
+      outline-offset: 3px;
+    }
+    .btn-primary {
+      background: var(--c-cta);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(29,78,216,.25);
+    }
+    .btn-primary:hover {
+      background: var(--c-cta-hover);
+      box-shadow: 0 4px 16px rgba(29,78,216,.35);
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--c-text);
+      border: 1.5px solid var(--c-border);
+    }
+    .btn-outline:hover {
+      border-color: var(--c-secondary);
+      background: var(--c-surface);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-1px);
+    }
+    .section-label {
+      display: inline-block;
+      font-family: var(--ff-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-cta);
+      margin-bottom: var(--space-sm);
+    }
+    .section-heading {
+      font-family: var(--ff-heading);
+      font-size: clamp(1.875rem, 4vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--c-text);
+      margin-bottom: var(--space-md);
+    }
+    .section-lead {
+      font-size: 1.0625rem;
+      color: var(--c-muted);
+      max-width: 600px;
+      line-height: 1.75;
+    }
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--c-cta);
+      border-radius: 2px;
+      margin-bottom: var(--space-md);
+    }
+
+    /* ─── Nav ────────────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      height: var(--nav-h);
+      background: rgba(250,250,250,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--c-border);
+      transition: box-shadow var(--dur) ease;
+    }
+    .nav.scrolled { box-shadow: var(--shadow-md); }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+    .nav__logo img {
+      height: 44px;
+      width: auto;
+    }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .nav__links a {
+      padding: 0.5rem 0.875rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--c-secondary);
+      transition: color var(--dur) ease, background var(--dur) ease;
+    }
+    .nav__links a:hover { color: var(--c-text); background: var(--c-accent); }
+    .nav__cta { margin-left: var(--space-sm); }
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      transition: background var(--dur) ease;
+    }
+    .nav__hamburger:hover { background: var(--c-accent); }
+    .nav__hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--c-text);
+      border-radius: 2px;
+      transition: transform var(--dur) ease, opacity var(--dur) ease;
+    }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav drawer */
+    .nav__drawer {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--c-surface);
+      border-bottom: 1px solid var(--c-border);
+      box-shadow: var(--shadow-lg);
+      padding: var(--space-md);
+      flex-direction: column;
+      gap: 0.25rem;
+      z-index: 40;
+    }
+    .nav__drawer.open { display: flex; }
+    .nav__drawer a {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--c-text);
+      transition: background var(--dur) ease;
+    }
+    .nav__drawer a:hover { background: var(--c-accent); }
+    .nav__drawer .btn { width: 100%; justify-content: center; margin-top: 0.5rem; }
+
+    /* ─── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      padding-top: calc(var(--nav-h) + var(--space-2xl));
+      padding-bottom: var(--space-2xl);
+      background: linear-gradient(160deg, #EFF6FF 0%, #FAFAFA 55%);
+      border-bottom: 1px solid var(--c-border);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -80px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29,78,216,.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    .hero__kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--c-accent);
+      border: 1px solid rgba(29,78,216,.18);
+      border-radius: 100px;
+      padding: 0.375rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--c-cta);
+      letter-spacing: 0.04em;
+      margin-bottom: var(--space-md);
+    }
+    .hero__kicker-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--c-cta);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .5; transform: scale(1.3); }
+    }
+    .hero__headline {
+      font-family: var(--ff-heading);
+      font-size: clamp(2.25rem, 6vw, 4.25rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--c-text);
+      margin-bottom: var(--space-md);
+    }
+    .hero__headline em {
+      font-style: italic;
+      color: var(--c-cta);
+    }
+    .hero__subline {
+      font-size: clamp(1rem, 2vw, 1.1875rem);
+      color: var(--c-muted);
+      line-height: 1.75;
+      max-width: 560px;
+      margin-bottom: var(--space-lg);
+    }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      align-items: center;
+    }
+    .hero__trust {
+      margin-top: var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+    .hero__trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--c-muted);
+      font-weight: 500;
+    }
+    .hero__trust-icon {
+      width: 20px; height: 20px;
+      color: var(--c-cta);
+      flex-shrink: 0;
+    }
+    .hero__media {
+      position: relative;
+    }
+    .hero__card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .hero__card-quote {
+      font-family: var(--ff-heading);
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      font-style: italic;
+      color: var(--c-text);
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+    }
+    .hero__card-quote::before { content: '\201C'; }
+    .hero__card-quote::after  { content: '\201D'; }
+    .hero__card-attr {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .hero__card-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      border: 2px solid var(--c-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--ff-heading);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--c-cta);
+      flex-shrink: 0;
+    }
+    .hero__card-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--c-text);
+    }
+    .hero__card-role {
+      font-size: 0.8125rem;
+      color: var(--c-muted);
+    }
+    .hero__stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--c-border);
+    }
+    .hero__stat {
+      text-align: center;
+    }
+    .hero__stat-num {
+      font-family: var(--ff-heading);
+      font-size: 1.625rem;
+      font-weight: 700;
+      color: var(--c-text);
+      display: block;
+    }
+    .hero__stat-lbl {
+      font-size: 0.75rem;
+      color: var(--c-muted);
+      margin-top: 2px;
+    }
+
+    /* ─── Section wrapper ─────────────────────────────────────────── */
+    .section { padding: var(--space-2xl) 0; }
+    .section--alt { background: var(--c-surface); }
+    .section--dark {
+      background: var(--c-primary);
+      color: #fff;
+    }
+    .section--dark .section-label { color: #93C5FD; }
+    .section--dark .section-heading { color: #fff; }
+    .section--dark .section-lead { color: #A1A1AA; }
+    .section--dark .divider { background: #93C5FD; }
+
+    /* ─── About ──────────────────────────────────────────────────── */
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    .about__text p {
+      color: var(--c-muted);
+      line-height: 1.8;
+      margin-bottom: var(--space-sm);
+      font-size: 1.0625rem;
+    }
+    .about__text p:last-child { margin-bottom: 0; }
+    .about__text strong { color: var(--c-text); font-weight: 500; }
+    .about__credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.625rem;
+      margin-top: var(--space-md);
+    }
+    .about__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      background: var(--c-accent);
+      border: 1px solid rgba(29,78,216,.15);
+      border-radius: 100px;
+      padding: 0.375rem 0.875rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--c-cta);
+    }
+    .about__image-wrap {
+      position: relative;
+    }
+    .about__image-frame {
+      background: linear-gradient(135deg, var(--c-accent) 0%, #DBEAFE 100%);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+      border: 1px solid rgba(29,78,216,.12);
+    }
+    .about__image-initials {
+      font-family: var(--ff-heading);
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      font-weight: 700;
+      color: var(--c-cta);
+      opacity: 0.35;
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+    .about__image-name {
+      font-family: var(--ff-heading);
+      font-size: 1.375rem;
+      font-weight: 600;
+      color: var(--c-text);
+    }
+    .about__image-title {
+      font-size: 0.875rem;
+      color: var(--c-muted);
+      margin-top: 0.25rem;
+    }
+    .about__press-row {
+      margin-top: var(--space-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+    }
+    .about__press-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+    }
+    .about__press-logo {
+      font-family: var(--ff-heading);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--c-secondary);
+      font-style: italic;
+    }
+
+    /* ─── Services ───────────────────────────────────────────────── */
+    .services__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto var(--space-xl);
+    }
+    .services__header .divider { margin: 0 auto var(--space-md); }
+    .services__header .section-lead { margin: 0 auto; }
+    .services__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+    .service-card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: box-shadow var(--dur) ease, border-color var(--dur) ease,
+                  transform var(--dur) ease;
+      cursor: default;
+    }
+    .service-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(29,78,216,.2);
+      transform: translateY(-2px);
+    }
+    .service-card__icon {
+      width: 48px; height: 48px;
+      background: var(--c-accent);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-sm);
+    }
+    .service-card__icon svg {
+      width: 24px; height: 24px;
+      stroke: var(--c-cta);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .service-card__title {
+      font-family: var(--ff-heading);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--c-text);
+      margin-bottom: 0.375rem;
+    }
+    .service-card__desc {
+      font-size: 0.9375rem;
+      color: var(--c-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── Why Kevin ──────────────────────────────────────────────── */
+    .why__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-xl);
+    }
+    .why__card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+    .why__num {
+      font-family: var(--ff-heading);
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(147,197,253,.3);
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+    .why__title {
+      font-family: var(--ff-heading);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .why__desc {
+      font-size: 0.9375rem;
+      color: #A1A1AA;
+      line-height: 1.7;
+    }
+
+    /* ─── Testimonials ───────────────────────────────────────────── */
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-xl);
+    }
+    .testimonial-card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--dur) ease;
+    }
+    .testimonial-card:hover { box-shadow: var(--shadow-md); }
+    .testimonial-card__stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: var(--space-sm);
+    }
+    .testimonial-card__stars svg {
+      width: 16px; height: 16px;
+      fill: #F59E0B;
+    }
+    .testimonial-card__quote {
+      font-family: var(--ff-heading);
+      font-size: 1.0625rem;
+      font-style: italic;
+      color: var(--c-text);
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+    }
+    .testimonial-card__quote::before { content: '\201C'; }
+    .testimonial-card__quote::after  { content: '\201D'; }
+    .testimonial-card__attr {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .testimonial-card__avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      border: 2px solid var(--c-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--ff-heading);
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--c-cta);
+      flex-shrink: 0;
+    }
+    .testimonial-card__name {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--c-text);
+    }
+    .testimonial-card__role {
+      font-size: 0.8125rem;
+      color: var(--c-muted);
+    }
+
+    /* ─── CTA Banner ─────────────────────────────────────────────── */
+    .cta-banner {
+      background: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl) var(--space-lg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -60%; left: -20%;
+      width: 60%; height: 200%;
+      background: rgba(255,255,255,.04);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .cta-banner__heading {
+      font-family: var(--ff-heading);
+      font-size: clamp(1.625rem, 4vw, 2.5rem);
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: var(--space-sm);
+    }
+    .cta-banner__sub {
+      color: rgba(255,255,255,.78);
+      font-size: 1.0625rem;
+      margin-bottom: var(--space-lg);
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+    .cta-banner__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      justify-content: center;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--c-cta);
+      font-weight: 600;
+    }
+    .btn-white:hover {
+      background: #EFF6FF;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,.3);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,.2);
+      border-color: rgba(255,255,255,.5);
+      transform: translateY(-1px);
+    }
+
+    /* ─── Contact ────────────────────────────────────────────────── */
+    .contact__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+    .contact__info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    .contact__info-icon {
+      width: 44px; height: 44px;
+      background: var(--c-accent);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact__info-icon svg {
+      width: 20px; height: 20px;
+      stroke: var(--c-cta);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .contact__info-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+      margin-bottom: 0.25rem;
+    }
+    .contact__info-value {
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: var(--c-text);
+    }
+    .contact__info-value a {
+      color: var(--c-cta);
+      transition: color var(--dur) ease;
+    }
+    .contact__info-value a:hover { color: var(--c-cta-hover); text-decoration: underline; }
+    .contact__socials {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: var(--space-md);
+    }
+    .contact__social-link {
+      width: 44px; height: 44px;
+      border: 1.5px solid var(--c-border);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--c-secondary);
+      transition: border-color var(--dur) ease, color var(--dur) ease,
+                  background var(--dur) ease, transform var(--dur) ease;
+      cursor: pointer;
+    }
+    .contact__social-link:hover {
+      border-color: var(--c-cta);
+      color: var(--c-cta);
+      background: var(--c-accent);
+      transform: translateY(-2px);
+    }
+    .contact__social-link svg {
+      width: 18px; height: 18px;
+      fill: currentColor;
+    }
+    .form {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    .form__group { margin-bottom: var(--space-md); }
+    .form__label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--c-text);
+      margin-bottom: 0.375rem;
+    }
+    .form__input,
+    .form__textarea,
+    .form__select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--c-border);
+      border-radius: var(--radius-md);
+      font-family: var(--ff-body);
+      font-size: 0.9375rem;
+      color: var(--c-text);
+      background: var(--c-bg);
+      transition: border-color var(--dur) ease, box-shadow var(--dur) ease;
+      outline: none;
+      appearance: none;
+    }
+    .form__input::placeholder,
+    .form__textarea::placeholder { color: #A1A1AA; }
+    .form__input:focus,
+    .form__textarea:focus,
+    .form__select:focus {
+      border-color: var(--c-cta);
+      box-shadow: 0 0 0 3px rgba(29,78,216,.12);
+    }
+    .form__textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
+    }
+    .form__submit { width: 100%; justify-content: center; }
+    .form__note {
+      margin-top: var(--space-sm);
+      font-size: 0.8125rem;
+      color: var(--c-muted);
+      text-align: center;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    .footer {
+      background: var(--c-primary);
+      color: rgba(255,255,255,.7);
+      padding: var(--space-xl) 0 var(--space-md);
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+    .footer__brand img {
+      height: 40px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+      margin-bottom: var(--space-sm);
+    }
+    .footer__brand-text {
+      font-family: var(--ff-heading);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+    .footer__tagline {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      max-width: 280px;
+    }
+    .footer__heading {
+      font-family: var(--ff-heading);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: var(--space-sm);
+    }
+    .footer__links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer__links a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,.6);
+      transition: color var(--dur) ease;
+    }
+    .footer__links a:hover { color: #fff; }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+    .footer__bottom-text {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,.45);
+    }
+    .footer__bottom-links {
+      display: flex;
+      gap: var(--space-md);
+    }
+    .footer__bottom-links a {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,.45);
+      transition: color var(--dur) ease;
+    }
+    .footer__bottom-links a:hover { color: rgba(255,255,255,.8); }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (min-width: 640px) {
+      .services__grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials__grid { grid-template-columns: repeat(2, 1fr); }
+      .form__row { grid-template-columns: 1fr 1fr; }
+      .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .nav__hamburger { display: none !important; }
+      .nav__links { display: flex !important; }
+      .nav__cta { display: inline-flex !important; }
+      .hero__inner { grid-template-columns: 1fr 1fr; gap: var(--space-2xl); }
+      .about__grid { grid-template-columns: 1fr 1fr; }
+      .about__grid .about__image-wrap { order: -1; }
+      .contact__grid { grid-template-columns: 1fr 1fr; }
+      .why__grid { grid-template-columns: repeat(3, 1fr); }
+      .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+
+    @media (max-width: 767px) {
+      .nav__links,
+      .nav__cta { display: none; }
+      .nav__hamburger { display: flex; }
+      .services__grid { grid-template-columns: 1fr; }
+      .hero__stat-row { gap: var(--space-xs); }
+      .hero__stat-num { font-size: 1.25rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .services__grid { grid-template-columns: repeat(3, 1fr); }
+      .testimonials__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* ─── Scroll reveal ──────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ─── Skip Link ──────────────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--space-sm);
+      background: var(--c-cta);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      z-index: 100;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: var(--space-sm); }
+  </style>
+</head>
+<body>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ── Navigation ─────────────────────────────────────────────── -->
+  <header>
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <!-- Logo -->
+          <a class="nav__logo" href="#" aria-label="Kevin Feddy Media — home">
+            <img src="kfm-logo.webp" alt="Kevin Feddy Media logo" width="132" height="44">
+          </a>
+
+          <!-- Desktop links -->
+          <ul class="nav__links" role="list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <a class="btn btn-primary nav__cta" href="#contact">Get in touch</a>
+
+          <!-- Hamburger -->
+          <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="drawer" role="menu">
+      <a href="#about" role="menuitem">About</a>
+      <a href="#services" role="menuitem">Services</a>
+      <a href="#testimonials" role="menuitem">Testimonials</a>
+      <a href="#contact" role="menuitem">Contact</a>
+      <a class="btn btn-primary" href="#contact" role="menuitem">Get in touch</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ── Hero ───────────────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero__inner">
+          <!-- Copy -->
+          <div class="hero__copy">
+            <div class="hero__kicker">
+              <span class="hero__kicker-dot" aria-hidden="true"></span>
+              Manchester-based PR &amp; Communications
+            </div>
+            <h1 class="hero__headline" id="hero-heading">
+              Words that work.<br>
+              Stories that <em>stick.</em>
+            </h1>
+            <p class="hero__subline">
+              Kevin Feddy brings 25+ years of national journalism experience to your business — delivering media relations, copywriting, and content that gets noticed, builds credibility, and drives results.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn-primary" href="#contact">Start the conversation</a>
+              <a class="btn btn-outline" href="#services">What I do</a>
+            </div>
+            <div class="hero__trust">
+              <span class="hero__trust-item">
+                <svg class="hero__trust-icon" aria-hidden="true" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Former MEN Business Editor
+              </span>
+              <span class="hero__trust-item">
+                <svg class="hero__trust-icon" aria-hidden="true" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Nationwide client base
+              </span>
+              <span class="hero__trust-item">
+                <svg class="hero__trust-icon" aria-hidden="true" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Personal, hands-on service
+              </span>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="hero__media">
+            <div class="hero__card reveal">
+              <p class="hero__card-quote">Kevin's press releases consistently land coverage we couldn't get elsewhere. He understands what journalists actually want to read.</p>
+              <div class="hero__card-attr">
+                <div class="hero__card-avatar" aria-hidden="true">SC</div>
+                <div>
+                  <div class="hero__card-name">Sarah C.</div>
+                  <div class="hero__card-role">Head of Marketing, Professional Services Firm</div>
+                </div>
+              </div>
+              <div class="hero__stat-row">
+                <div class="hero__stat">
+                  <span class="hero__stat-num">25+</span>
+                  <span class="hero__stat-lbl">Years in journalism</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-num">100s</span>
+                  <span class="hero__stat-lbl">Clients served</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-num">10</span>
+                  <span class="hero__stat-lbl">Core services</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ──────────────────────────────────────────────────── -->
+    <section class="section section--alt" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+          <!-- Image frame -->
+          <div class="about__image-wrap reveal">
+            <div class="about__image-frame">
+              <div class="about__image-initials" aria-hidden="true">KF</div>
+              <div class="about__image-name">Kevin Feddy</div>
+              <div class="about__image-title">PR Consultant &amp; Copywriter</div>
+              <div class="about__press-row">
+                <span class="about__press-label">Formerly at</span>
+                <span class="about__press-logo">Manchester Evening News</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="about__text reveal">
+            <span class="section-label">About Kevin</span>
+            <div class="divider"></div>
+            <h2 class="section-heading" id="about-heading">A journalist who speaks your language — and theirs</h2>
+            <p>Kevin Feddy is a <strong>vastly experienced and respected journalist</strong> who spent more than 25 years working on daily newspapers, including 12 years as Business Editor at the <strong>Manchester Evening News</strong>.</p>
+            <p>That newsroom background isn't a badge — it's a practical advantage. Kevin knows exactly what editors look for, how to frame a story for maximum pickup, and how to write copy that connects with real audiences rather than sounding like marketing.</p>
+            <p>Since launching his own agency, Kevin has worked with businesses across sectors — from SMEs to established organisations — providing <strong>communications services that are proactive, personal, and built around your goals</strong>.</p>
+            <div class="about__credentials">
+              <span class="about__badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                MEN Business Editor
+              </span>
+              <span class="about__badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                25+ Years Daily Newspapers
+              </span>
+              <span class="about__badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                UK &amp; Regional Press
+              </span>
+              <span class="about__badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Independent Agency
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Services ───────────────────────────────────────────────── -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services__header reveal">
+          <span class="section-label">What I do</span>
+          <div class="divider"></div>
+          <h2 class="section-heading" id="services-heading">Communications services built for your business</h2>
+          <p class="section-lead">From day-to-day media releases to full-scale media training, every service is delivered personally — no account managers, no hand-offs.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l6 6v8a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            </div>
+            <h3 class="service-card__title">Media Relations</h3>
+            <p class="service-card__desc">Strategic placement of your stories with regional, national, and trade press — building the profile your business deserves.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="service-card__title">Copywriting</h3>
+            <p class="service-card__desc">Sharp, credible copy for websites, brochures, proposals, and reports — written to engage your audience and reflect your brand voice.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3 class="service-card__title">Media Training</h3>
+            <p class="service-card__desc">Practical, journalist-led training so your spokespeople perform confidently in interviews — on radio, TV, and in print.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="service-card__title">Media Releases</h3>
+            <p class="service-card__desc">Professionally crafted press releases written in house style — maximising the chance of genuine editorial pick-up.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"/></svg>
+            </div>
+            <h3 class="service-card__title">Social Media Content</h3>
+            <p class="service-card__desc">Purposeful, on-brand content for LinkedIn, Twitter/X, and beyond — written to build authority and spark genuine engagement.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="service-card__title">Website Content</h3>
+            <p class="service-card__desc">SEO-aware website copy that reads naturally, positions your expertise clearly, and converts visitors into enquiries.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="service-card__title">Company Newsletters</h3>
+            <p class="service-card__desc">Engaging internal and external newsletters that keep your audiences informed and connected — written with editorial discipline.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+            </div>
+            <h3 class="service-card__title">E-Shots</h3>
+            <p class="service-card__desc">Direct email campaigns written to cut through inbox noise — clear, compelling, and calibrated for your audience.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <h3 class="service-card__title">Award Entries</h3>
+            <p class="service-card__desc">Compelling award submissions that present your achievements in the strongest possible light — crafted to stand out to judges.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3 class="service-card__title">Event Support</h3>
+            <p class="service-card__desc">End-to-end communications support for launches, conferences, and announcements — from pre-event releases to post-event coverage.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why Kevin ───────────────────────────────────────────────── -->
+    <section class="section section--dark" id="why" aria-labelledby="why-heading">
+      <div class="container">
+        <span class="section-label">Why work with me</span>
+        <div class="divider"></div>
+        <h2 class="section-heading" id="why-heading">The difference experience makes</h2>
+        <p class="section-lead">Any agency can send a press release. Few can tell you exactly why it will or won't land — and then write one that does.</p>
+
+        <div class="why__grid">
+          <div class="why__card reveal">
+            <div class="why__num" aria-hidden="true">01</div>
+            <h3 class="why__title">Journalist instinct</h3>
+            <p class="why__desc">After 25+ years on daily newspapers, Kevin knows precisely what makes a story run — and how to package your news so editors say yes rather than delete.</p>
+          </div>
+          <div class="why__card reveal">
+            <div class="why__num" aria-hidden="true">02</div>
+            <h3 class="why__title">High-quality delivery</h3>
+            <p class="why__desc">Every piece of content — press release, website copy, newsletter — is written to the standard you'd expect from a professional national journalist. No templates, no filler.</p>
+          </div>
+          <div class="why__card reveal">
+            <div class="why__num" aria-hidden="true">03</div>
+            <h3 class="why__title">Personal &amp; proactive</h3>
+            <p class="why__desc">You work directly with Kevin — not a junior. He invests time in understanding your business, anticipates opportunities, and brings ideas to the table without being asked.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Testimonials ─────────────────────────────────────────────── -->
+    <section class="section section--alt" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="services__header reveal">
+          <span class="section-label">Client testimonials</span>
+          <div class="divider"></div>
+          <h2 class="section-heading" id="testimonials-heading">What clients say</h2>
+          <p class="section-lead">Trusted by businesses across the UK for communications that consistently deliver above expectations.</p>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">Kevin's ability to translate complex business news into a compelling story is exceptional. His media releases consistently achieve coverage that our internal team simply couldn't match.</p>
+            <div class="testimonial-card__attr">
+              <div class="testimonial-card__avatar" aria-hidden="true">JM</div>
+              <div>
+                <div class="testimonial-card__name">James M.</div>
+                <div class="testimonial-card__role">Managing Director, Professional Services</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">The media training session was genuinely transformative. Kevin's journalistic perspective meant we learned what journalists actually want — not just interview technique theory.</p>
+            <div class="testimonial-card__attr">
+              <div class="testimonial-card__avatar" aria-hidden="true">RL</div>
+              <div>
+                <div class="testimonial-card__name">Rachel L.</div>
+                <div class="testimonial-card__role">CEO, Healthcare Organisation</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">Kevin rewrote our website copy and it's a different business online. Clear, confident, and reads nothing like the generic agency copy we had before. Enquiries went up noticeably.</p>
+            <div class="testimonial-card__attr">
+              <div class="testimonial-card__avatar" aria-hidden="true">DH</div>
+              <div>
+                <div class="testimonial-card__name">David H.</div>
+                <div class="testimonial-card__role">Director, B2B Technology Company</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA Banner ──────────────────────────────────────────────── -->
+    <section class="section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2 class="cta-banner__heading" id="cta-heading">Ready to raise your profile?</h2>
+          <p class="cta-banner__sub">Whether you need a one-off press release or a long-term communications partner, the conversation starts here.</p>
+          <div class="cta-banner__actions">
+            <a class="btn btn-white" href="#contact">Get in touch today</a>
+            <a class="btn btn-ghost" href="tel:01613008543">Call 0161 300 8543</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ─────────────────────────────────────────────────── -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__grid">
+
+          <!-- Info -->
+          <div class="reveal">
+            <span class="section-label">Get in touch</span>
+            <div class="divider"></div>
+            <h2 class="section-heading" id="contact-heading">Let's talk about your communications</h2>
+            <p class="section-lead" style="margin-bottom: var(--space-lg);">No hard sell. No agency jargon. Just a straightforward conversation about what you need and how Kevin can help.</p>
+
+            <div class="contact__info-item">
+              <div class="contact__info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact__info-label">Email</div>
+                <div class="contact__info-value">
+                  <a href="mailto:kevin@kevinfeddymedia.co.uk">kevin@kevinfeddymedia.co.uk</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__info-item">
+              <div class="contact__info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact__info-label">Phone</div>
+                <div class="contact__info-value">
+                  <a href="tel:01613008543">0161 300 8543</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__info-item">
+              <div class="contact__info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact__info-label">Location</div>
+                <div class="contact__info-value">Manchester, UK &mdash; serving clients nationwide</div>
+              </div>
+            </div>
+
+            <div class="contact__socials">
+              <a class="contact__social-link" href="https://twitter.com/KevinFeddy" target="_blank" rel="noopener noreferrer" aria-label="Kevin Feddy on Twitter / X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a class="contact__social-link" href="https://www.linkedin.com/in/kevin-feddy-68515725" target="_blank" rel="noopener noreferrer" aria-label="Kevin Feddy on LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="reveal">
+            <form class="form" name="contact" method="POST" aria-label="Contact form">
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="first-name">First name <span aria-hidden="true">*</span></label>
+                  <input class="form__input" type="text" id="first-name" name="first-name" placeholder="Jane" required autocomplete="given-name">
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="last-name">Last name <span aria-hidden="true">*</span></label>
+                  <input class="form__input" type="text" id="last-name" name="last-name" placeholder="Smith" required autocomplete="family-name">
+                </div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email">Email address <span aria-hidden="true">*</span></label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="jane@yourbusiness.com" required autocomplete="email">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="phone">Phone number</label>
+                <input class="form__input" type="tel" id="phone" name="phone" placeholder="07700 900 000" autocomplete="tel">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="service">Service of interest</label>
+                <select class="form__select" id="service" name="service">
+                  <option value="">Select a service...</option>
+                  <option value="media-relations">Media Relations</option>
+                  <option value="copywriting">Copywriting</option>
+                  <option value="media-training">Media Training</option>
+                  <option value="media-releases">Media Releases</option>
+                  <option value="social-media">Social Media Content</option>
+                  <option value="website-content">Website Content</option>
+                  <option value="newsletters">Company Newsletters</option>
+                  <option value="eshots">E-Shots</option>
+                  <option value="awards">Award Entries</option>
+                  <option value="events">Event Support</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="message">Your message <span aria-hidden="true">*</span></label>
+                <textarea class="form__textarea" id="message" name="message" placeholder="Tell me a bit about your business and what you're looking for..." required></textarea>
+              </div>
+              <button class="btn btn-primary form__submit" type="submit">Send message</button>
+              <p class="form__note">I'll respond within one business day.</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div>
+          <img src="kfm-logo.webp" alt="Kevin Feddy Media" width="120" height="40" class="footer__brand img">
+          <div class="footer__brand-text">Kevin Feddy Media</div>
+          <p class="footer__tagline">Expert PR, copywriting, and media relations from a journalist with 25+ years of national newspaper experience.</p>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Services</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="#services">Media Relations</a></li>
+            <li><a href="#services">Copywriting</a></li>
+            <li><a href="#services">Media Training</a></li>
+            <li><a href="#services">Website Content</a></li>
+            <li><a href="#services">Award Entries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Company</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="#about">About Kevin</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:kevin@kevinfeddymedia.co.uk">kevin@kevinfeddymedia.co.uk</a></li>
+            <li><a href="tel:01613008543">0161 300 8543</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__bottom-text">&copy; <span id="year"></span> Kevin Feddy Media. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Nav scroll shadow
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('drawer');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      drawer.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+
+    // Close drawer on link click
+    drawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        drawer.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer  = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+      { threshold: 0.12 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
